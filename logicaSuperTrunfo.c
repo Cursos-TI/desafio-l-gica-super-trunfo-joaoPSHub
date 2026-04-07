@@ -8,6 +8,7 @@ int main() {
 
   // Área de definição das variáveis para armazenar as propriedades da cidade 1
 
+  char jogador1[] = "São Paulo";
   int populacao = 12300000;
   float area =  1521.11, densidade;
   float pib = 699.28, percapita;
@@ -16,13 +17,28 @@ int main() {
 
   // Área de definição das variáveis para armazenar as propriedades da cidade 2
 
+  char jogador2[] = "Rio de Janeiro";
   int populacao2 = 6700000;
   float area2 = 1200.25, densidade2;
   float pib2 = 300.50, percapita2;
   int pontos2 = 30;
   float superPoder2;
-  
 
+   
+  // Interface com o usuário — exibição do menu carta 1
+
+  int opcao;
+    
+  printf("*** Jogo SuperTrunfo ***\n");
+  printf("Escolha o atributo para comparação:\n");
+  printf("1. populacao\n");
+  printf("2. area\n");
+  printf("3. pib\n");
+  printf("4. pontos\n");
+  printf("5. superPoder\n");
+  printf("Escolha: ");
+  scanf("%d", &opcao);
+  
   //Calcular a Densidade Populacional carta 1
 
   densidade = (float) populacao / area;
@@ -78,7 +94,33 @@ int main() {
   printf("Pib per capita: Carta 1 venceu (%d)\n", percapita > percapita2);
   printf("Super Poder: Carta 1 venceu (%d)\n", superPoder > superPoder2);
 
-  // Área para comparação das cartas (if/else)
+  /* -------------------------------------------------------
+  Área para comparação das cartas estrutura (Switch) */
+
+  switch (opcao)
+  {
+  case 1:
+    printf("Usuário digitou 1: populacao\n");
+    printf("Carta 1 - São Paulo (SP): %d\n", populacao);
+    printf("Verncedor é: ");
+    break;
+  
+  default:
+    break;
+  }
+
+
+
+  printf("1. populacao\n");
+  printf("2. area\n");
+  printf("3. pib\n");
+  printf("4. pontos\n");
+  printf("5. superPoder\n");
+  printf("Escolha: ");
+  scanf("%d", &opcao);
+
+  /* -------------------------------------------------------
+  Área para comparação das cartas com (if/else) */
 
   if (populacao > populacao2)
   {
