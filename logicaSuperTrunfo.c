@@ -1,8 +1,11 @@
-#include <stdio.h>
+/**
+ * @file logicaSuperTrunfo.c
+ * @brief Desafio Super Trunfo - Jogo de comparação de cartas 
+ * @author João Paulo
+ * @date 08/04/2026
+ */
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
+#include <stdio.h>
 
 int main() {
 
@@ -25,7 +28,7 @@ int main() {
   float superPoder2;
 
    
-  // Interface com o usuário — exibição do menu carta 1
+  // Interface com o usuário — exibição do MENU
 
   int opcao;
     
@@ -35,7 +38,9 @@ int main() {
   printf("2. area\n");
   printf("3. pib\n");
   printf("4. pontos\n");
-  printf("5. superPoder\n");
+  printf("5. densidade\n");
+  printf("6. percapita\n");
+  printf("7. superPoder\n");
   printf("Escolha: ");
   scanf("%d", &opcao);
   
@@ -83,17 +88,6 @@ int main() {
   printf("Densidade populacional: %.2f Hab/km\n", densidade2);
   printf("Pib per capita: %.2f Reais\n", percapita2);
   printf("Super Poder carta 2: %.2f Power\n", superPoder2);
-
-  // Área para exibição da comparação das cartas
-
-  printf("População: Carta 1 venceu (%d)\n", populacao > populacao2);
-  printf("Área: Carta 1 venceu (%d)\n", area > area2);
-  printf("Pib: Carta 1 venceu (%d)\n", pib > pib2);
-  printf("Pontos Turisticos: Carta 1 venceu (%d)\n", pontos > pontos2);
-  printf("Densidade: Carta 1 venceu (%d)\n", densidade < densidade2);
-  printf("Pib per capita: Carta 1 venceu (%d)\n", percapita > percapita2);
-  printf("Super Poder: Carta 1 venceu (%d)\n", superPoder > superPoder2);
-
   
   // Área para comparação das cartas estrutura (Switch)
 
