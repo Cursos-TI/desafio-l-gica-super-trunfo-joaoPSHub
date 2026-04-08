@@ -94,8 +94,8 @@ int main() {
   printf("Pib per capita: Carta 1 venceu (%d)\n", percapita > percapita2);
   printf("Super Poder: Carta 1 venceu (%d)\n", superPoder > superPoder2);
 
-  /* -------------------------------------------------------
-  Área para comparação das cartas estrutura (Switch) */
+  
+  // Área para comparação das cartas estrutura (Switch)
 
   switch (opcao)
   {
