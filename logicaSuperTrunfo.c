@@ -36,6 +36,11 @@ int main() {
   float valorAtributo1carta1, valorAtributo1carta2;
   float valorAtributo2carta1, valorAtributo2carta2;
 
+  // Área de definição variável calculos dos valores dos atributos
+
+  float soma1;
+  float soma2;
+
   // Interface com o usuário — exibição de MENUS - Inicio do Jogo
   
   // Escolha de atributo 1
@@ -90,7 +95,7 @@ int main() {
   printf("Pib: %.2f Bilhões de reais\n", pib);
   printf("Pontos turísticos: %d\n", pontos);
   printf("Densidade populacional: %.2f Hab/km\n", densidade);
-  printf("Pib per capita: %.2f Reais\n", percapita);
+  printf("Pib per capita: %.6f Reais\n", percapita);
   printf("Super Poder carta 1: %.2f Power\n", superPoder);
   
 
@@ -113,7 +118,7 @@ int main() {
   printf("Pib: %.2f Bilhões de reais\n", pib2);
   printf("Pontos turísticos: %d\n", pontos2);
   printf("Densidade populacional: %.2f Hab/km\n", densidade2);
-  printf("Pib per capita: %.2f Reais\n", percapita2);
+  printf("Pib per capita: %.6f Reais\n", percapita2);
   printf("Super Poder carta 2: %.2f Power\n", superPoder2);
   
   // Área para comparação das cartas estrutura (Switch) carta 1
@@ -193,59 +198,26 @@ int main() {
 
     }
 
-  /* -------------------------------------------------------
-  Área para comparação das cartas com (if/else) 
+  soma1 = valorAtributo1carta1 + valorAtributo2carta1;
+  soma2 = valorAtributo1carta2 + valorAtributo2carta2;
 
-  if (populacao > populacao2)
+  // Área para exibição dos dados das comparações
+
+  printf("A soma dos seus atributos é: %.2f\n", soma1);
+  printf("A soma dos atributos do adiversário é: %.2f\n", soma2);
+
+  // Área de saída de dados
+  // Verificação do resultado e resposta
+
+  if (soma1 > soma2)
   {
-    printf("Carta 1 - São Paulo (SP): %d\n", populacao);
-  }else {
-    printf("Carta 2 - Rio de Janeiro (RJ): %d\n", populacao2);
+     printf("Parabéns, carta 1 %s venceu!\n", jogador1 );
+  } else if (soma1 == soma2) {
+     printf("Carta 1 %s e Carta 2 %s empataram!\n", jogador1, jogador2);
+  } else {
+     printf("Infelizmente, a carta 2 %s venceu!\n", jogador2);
   }
-
-  if (area > area2)
-  {
-    printf("Carta 1 - São Paulo (SP): %.2f\n", area);
-  }else {
-    printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", area2);
-  }
-
-  if (pib > pib2)
-  {
-    printf("Carta 1 - São Paulo (SP): %.2f\n", pib);
-  }else {
-    printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", pib2);
-  }
-
-  if (pontos > pontos2)
-  {
-    printf("Carta 1 - São Paulo (SP):%d\n", pontos);
-  }else {
-    printf("Carta 2 - Rio de Janeiro (RJ): %d\n", pontos2);
-  }
-
-  if (densidade < densidade2)
-  {
-    printf("Carta 1 - São Paulo (SP): %.2f\n", densidade);
-  }else {
-    printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", densidade2);
-  }
-
-  if (percapita > percapita2)
-  {
-    printf("Carta 1 - São Paulo (SP): %.6f\n", percapita);
-  }else {
-    printf("Carta 2 - Rio de Janeiro (RJ): %.6f\n", percapita2);
-  }
-
-    if (superPoder > superPoder2)
-  {
-    printf("Resultado: Carta 1 - São Paulo (SP) venceu! %.2f\n", superPoder);
-  }else {
-    printf("Resultado: Carta 2 - Rio de Janeiro (RJ) venceu! %.2f\n", superPoder2);
-  }
-
-*/
+  
 
   
 return 0;
