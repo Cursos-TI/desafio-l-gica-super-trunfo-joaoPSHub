@@ -26,11 +26,15 @@ int main() {
   float pib2 = 300.50, percapita2;
   int pontos2 = 30;
   float superPoder2;
-
    
   // Área de definição variável opção Interface
 
   int opcao1, opcao2;
+
+  // Variável para comparação
+
+  float valorAtributo1carta1, valorAtributo1carta2;
+  float valorAtributo2carta1, valorAtributo2carta2;
 
   // Interface com o usuário — exibição de MENUS - Inicio do Jogo
   
@@ -112,113 +116,82 @@ int main() {
   printf("Pib per capita: %.2f Reais\n", percapita2);
   printf("Super Poder carta 2: %.2f Power\n", superPoder2);
   
-  // Área para comparação das cartas estrutura (Switch)
+  // Área para comparação das cartas estrutura (Switch) carta 1
 
-  switch (opcao)
+  switch (opcao1)
   {
   case 1:
-    printf("\n*** Comparando População ***\n");
-    printf("%s: %d habitantes\n", jogador1, populacao);
-    printf("%s: %d habitantes\n", jogador2, populacao2);
-
-    if (populacao > populacao2)
-    {
-        printf("Resultado: %s venceu!\n", jogador1);
-    } else if (populacao2 > populacao) {
-        printf("Resultado: %s venceu!\n", jogador2);
-    } else {
-      printf("Resultado: Empate!\n");
-    }
+    valorAtributo1carta1 = populacao;
+    valorAtributo1carta2 = populacao2;
     break;
   case 2:
-    printf("\n*** Comparando Área ***\n");
-    printf("%s: %.2f Km\n", jogador1, area);
-    printf("%s: %.2f Km\n", jogador2, area2);
-
-    if (area > area2)
-    {
-        printf("Resultado: %s venceu!\n", jogador1);
-    } else if (area2 > area) {
-        printf("Resultado: %s venceu!\n", jogador2);
-    } else {
-      printf("Resultado: Empate!\n");
-    }
+    valorAtributo1carta1 = area;
+    valorAtributo1carta2 = area2;
     break;
   case 3:
-    printf("\n*** Comparando Pib ***\n");
-    printf("%s: %.2f Bilhões de reais\n", jogador1, pib);
-    printf("%s: %.2f Bilhões de reais\n", jogador2, pib2);
-
-    if (pib > pib2)
-    {
-        printf("Resultado: %s venceu!\n", jogador1);
-    } else if (pib2 > pib) {
-        printf("Resultado: %s venceu!\n", jogador2);
-    } else {
-      printf("Resultado: Empate!\n");
-    }
+    valorAtributo1carta1 = pib;
+    valorAtributo1carta2 = pib2;
     break;
   case 4:
-    printf("\n*** Comparando Pontos Turisticos ***\n");
-    printf("%s: %d Pontos\n", jogador1, pontos);
-    printf("%s: %d Pontos\n", jogador2, pontos2);
-
-    if (pontos > pontos2)
-    {
-        printf("Resultado: %s venceu!\n", jogador1);
-    } else if (pontos2 > pontos) {
-        printf("Resultado: %s venceu!\n", jogador2);
-    } else {
-      printf("Resultado: Empate!\n");
-    }
+    valorAtributo1carta1 = pontos;
+    valorAtributo1carta2 = pontos2;
     break;
   case 5:
-    printf("\n*** Comparando Densidade Populacional ***\n");
-    printf("%s: %.2f Densidade\n", jogador1, densidade);
-    printf("%s: %.2f Densidade\n", jogador2, densidade2);
-
-    if (densidade < densidade2)
-    {
-        printf("Resultado: %s venceu!\n", jogador1);
-    } else if (densidade2 < densidade) {
-        printf("Resultado: %s venceu!\n", jogador2);
-    } else {
-      printf("Resultado: Empate!\n");
-    }
+    valorAtributo1carta1 = densidade;
+    valorAtributo1carta2 = densidade2;
     break;
   case 6:
-    printf("\n*** Comparando Pib Per Capita ***\n");
-    printf("%s: %.2f Reais\n", jogador1, percapita);
-    printf("%s: %.2f Reais\n", jogador2, percapita2);
-
-    if (percapita > percapita2)
-    {
-        printf("Resultado: %s venceu!\n", jogador1);
-    } else if (percapita2 > percapita) {
-        printf("Resultado: %s venceu!\n", jogador2);
-    } else {
-      printf("Resultado: Empate!\n");
-    }
+    valorAtributo1carta1 = percapita;
+    valorAtributo1carta2 = percapita2;
     break;
   case 7:
-    printf("\n*** Comparando Super Poder ***\n");
-    printf("%s: %.2f Poder\n", jogador1, superPoder);
-    printf("%s: %.2f Poder\n", jogador2, superPoder2);
-
-    if (superPoder > superPoder2)
-    {
-        printf("Resultado: %s venceu!\n", jogador1);
-    } else if (superPoder2 > superPoder) {
-        printf("Resultado: %s venceu!\n", jogador2);
-    } else {
-      printf("Resultado: Empate!\n");
-    }
+    valorAtributo1carta1 = superPoder;
+    valorAtributo1carta2 = superPoder2;
     break;
   default:
     printf("Opção inválida!\n");
     break;
 
-  }
+    }
+  
+
+  // Área para comparação das cartas estrutura (Switch) carta 2
+
+  switch (opcao2)
+  {
+  case 1:
+    valorAtributo2carta1 = populacao;
+    valorAtributo2carta2 = populacao2;
+    break;
+  case 2:
+    valorAtributo2carta1 = area;
+    valorAtributo2carta2 = area2;
+    break;
+  case 3:
+    valorAtributo2carta1 = pib;
+    valorAtributo2carta2 = pib2;
+    break;
+  case 4:
+    valorAtributo2carta1 = pontos;
+    valorAtributo2carta2 = pontos2;
+    break;
+  case 5:
+    valorAtributo2carta1 = densidade;
+    valorAtributo2carta2 = densidade2;
+    break;
+  case 6:
+    valorAtributo2carta1 = percapita;
+    valorAtributo2carta2 = percapita2;
+    break;
+  case 7:
+    valorAtributo2carta1 = superPoder;
+    valorAtributo2carta2 = superPoder2;
+    break;
+  default:
+    printf("Opção inválida!\n");
+    break;
+
+    }
 
   /* -------------------------------------------------------
   Área para comparação das cartas com (if/else) 
