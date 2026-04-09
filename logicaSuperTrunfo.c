@@ -28,12 +28,15 @@ int main() {
   float superPoder2;
 
    
-  // Interface com o usuário — exibição do MENU
+  // Área de definição variável opção Interface
 
-  int opcao;
-    
+  int opcao1, opcao2;
+
+  // Interface com o usuário — exibição de MENUS - Inicio do Jogo
+  
+  // Escolha de atributo 1
   printf("*** Jogo SuperTrunfo ***\n");
-  printf("Escolha o atributo para comparação:\n");
+  printf("Escolha o primeiro atributo:\n");
   printf("1. populacao\n");
   printf("2. area\n");
   printf("3. pib\n");
@@ -41,8 +44,28 @@ int main() {
   printf("5. densidade\n");
   printf("6. percapita\n");
   printf("7. superPoder\n");
-  printf("Escolha: ");
-  scanf("%d", &opcao);
+  scanf("%d", &opcao1);
+
+  // Escolha de atributo 2
+  printf("Escolha o segundo atributo:\n");
+  printf("1. populacao\n");
+  printf("2. area\n");
+  printf("3. pib\n");
+  printf("4. pontos\n");
+  printf("5. densidade\n");
+  printf("6. percapita\n");
+  printf("7. superPoder\n");
+  scanf("%d", &opcao2);
+
+  // Verificação se atributos são iguais — if + return 0
+
+  if (opcao1 == opcao2)
+  {
+    printf("Você escolheu o mesmo atributo!\n");
+
+    return 0;
+  }
+  
   
   //Calcular a Densidade Populacional carta 1
 
